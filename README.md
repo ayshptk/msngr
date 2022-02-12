@@ -6,6 +6,7 @@ platforms supported:
 
 - [x] slack
 - [x] discord
+- [ ] telegram
 
 won't be adding new platforms myself because of current commitments but feel free to create PR **with a working test** to get it merged :)
 

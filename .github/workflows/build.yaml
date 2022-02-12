@@ -18,7 +18,7 @@ jobs:
         env:
           CI: true
 
-      - name: Automated Version Bump
+      - name: Version
         uses: "phips28/gh-action-bump-version@master"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
