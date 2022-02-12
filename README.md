@@ -37,3 +37,10 @@ await send(webhook, "Hello World!");
 ```
 
 
+## contributing:
+feel free to open PRs for any new feature/bug fixes
+
+some things on the top of my head:
+- [ ] integrate testing into workflows
+- [ ] support for rich embeds (maybe?)
+- [ ] support for attachments (maybe?)
