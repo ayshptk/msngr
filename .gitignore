@@ -1,0 +1,4 @@
+node_modules
+/coverage
+src/__tests__/local.test.ts
+package-lock.json
