@@ -1,7 +1,7 @@
 {
-  "name": "@ayshptk/msngr",
+  "name": "@metapass/msngr",
   "version": "0.1.1",
-  "description": "",
+  "description": "a tiny utility to post to user-provided webhooks without worrying about platforms built for [@metapass](https://github.com/metapass)",
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ayshptk/msngr"
+    "url": "git+https://github.com/metapass/msngr.git"
   },
   "files": [
     "lib/**/*"
@@ -18,12 +18,15 @@
   "keywords": [
     "webhooks"
   ],
-  "author": "Ayush Pathak",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "author": "Anoushk Kharangate",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ayshptk/msngr/issues"
+    "url": "https://github.com/metapass/msngr/issues"
   },
-  "homepage": "https://github.com/ayshptk/msngr#readme",
+  "homepage": "https://github.com/metapass/msngr#readme",
   "devDependencies": {
     "@types/jest": "^27.4.0",
     "@types/node": "^16.11.6",
@@ -42,5 +45,9 @@
   },
   "dependencies": {
     "node-fetch": "2.6.7"
+  },
+  "types": "./lib/index.d.ts",
+  "directories": {
+    "lib": "lib"
   }
 }
