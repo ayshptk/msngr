@@ -1,4 +1,4 @@
-# @metapass/msngr
+# @metapasshq/msngr
 
 a tiny utility to post to user-provided webhooks without worrying about platforms built for [@metapass](https://github.com/metapass)
 
@@ -14,20 +14,20 @@ won't be adding new platforms myself because of current commitments but feel fre
 ### 1. install:
 
 ```
-npm install @ayshptk/msngr
+npm install @metapasshq/msngr
 ```
 
 or
 
 ```
-yarn install @ayshptk/msngr
+yarn install @metapasshq/msngr
 ```
 
 ### 2. use
 
 ```ts
 // import
-import { send } from "@metapass/msngr";
+import { send } from "@metapasshq/msngr";
 
 // declaring webhook
 const webhook = "https://discord.com/api/webhooks/987654321/abcdefghijklmnopqrstuvwxyz";
