@@ -1,10 +1,10 @@
-# @ayshptk/msngr
+# @metapass/msngr
 
-a tiny utility to post to user-provided webhooks without worrying about platforms built for [@raiddotfarm](https://github.com/raiddotfarm)
+a tiny utility to post to user-provided webhooks without worrying about platforms built for [@metapass](https://github.com/metapass)
 
 platforms supported:
 
-- [x] slack
+- [ ] slack
 - [x] discord
 - [ ] telegram
 
@@ -27,7 +27,7 @@ yarn install @ayshptk/msngr
 
 ```ts
 // import
-import { send } from "@ayshptk/msngr";
+import { send } from "@metapass/msngr";
 
 // declaring webhook
 const webhook = "https://discord.com/api/webhooks/987654321/abcdefghijklmnopqrstuvwxyz";
@@ -42,5 +42,5 @@ feel free to open PRs for any new feature/bug fixes
 
 some things on the top of my head:
 - [ ] integrate testing into workflows
-- [ ] support for rich embeds (maybe?)
+- [x] support for rich embeds (maybe?)
 - [ ] support for attachments (maybe?)
