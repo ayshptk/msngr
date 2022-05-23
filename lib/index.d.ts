@@ -1,5 +1,7 @@
+import { MessageEmbed } from "./types";
 export interface payload {
-    message: string;
+    message?: string;
+    embeds?: MessageEmbed[];
 }
 export declare type request = string | payload;
 export interface response {

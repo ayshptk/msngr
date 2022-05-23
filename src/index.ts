@@ -1,8 +1,10 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import fetch from "node-fetch";
+import { MessageEmbed } from "./types";
 export interface payload {
-  message: string;
+  message?: string;
+  embeds?: MessageEmbed[];
 }
 export type request = string | payload;
 export interface response {
@@ -22,9 +24,15 @@ const send = async (webhook: string, request: request): Promise<response> => {
       text: request.message,
     };
   } else if (webhook.startsWith("https://discord.com/api/webhooks")) {
-    finalPayload = {
-      content: request.message,
-    };
+    if (request.message) {
+      finalPayload = {
+        content: request.message,
+      };
+    } else if (request.embeds) {
+      finalPayload = {
+        embeds: request.embeds,
+      };
+    }
   } else {
     return {
       success: false,
@@ -38,7 +46,7 @@ const send = async (webhook: string, request: request): Promise<response> => {
       "Content-Type": "application/json",
     },
   })
-    .then(async (res: any) => {
+    .then(async (res: Response) => {
       if (res.ok) {
         return {
           success: true,
@@ -48,7 +56,7 @@ const send = async (webhook: string, request: request): Promise<response> => {
         throw new Error(res.statusText);
       }
     })
-    .catch((err : any) => {
+    .catch((err: Error) => {
       return {
         success: false,
         reason: err.message,
