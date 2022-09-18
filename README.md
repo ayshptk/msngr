@@ -1,6 +1,6 @@
 # @ayshptk/msngr
 
-a tiny utility to post to user-provided webhooks without worrying about platforms built for [@raiddotfarm](https://github.com/raiddotfarm)
+a tiny utility to post to user-provided webhooks without worrying about platforms built for [@executehq](https://github.com/executehq)
 
 platforms supported:
 
